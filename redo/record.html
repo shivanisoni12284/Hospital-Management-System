@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="Icon" href="/LOGO.jpg"></link>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SWASTHYAA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7fa;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2a4d69;
+      margin-bottom: 30px;
+    }
+
+    .records-table {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      border-collapse: collapse;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .records-table th,
+    .records-table td {
+      padding: 16px;
+      text-align: left;
+    }
+
+    .records-table th {
+      background-color: #2a9d8f;
+      color: white;
+    }
+
+    .records-table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .records-table tr:hover {
+      background-color: #e0f7f4;
+    }
+
+    @media (max-width: 768px) {
+      .records-table, .records-table thead, .records-table tbody, .records-table th, .records-table td, .records-table tr {
+        display: block;
+      }
+
+      .records-table tr {
+        margin-bottom: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      }
+
+      .records-table td {
+        padding: 12px;
+        position: relative;
+        padding-left: 50%;
+      }
+
+      .records-table td::before {
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .records-table td:nth-of-type(1)::before { content: "Patient Name"; }
+      .records-table td:nth-of-type(2)::before { content: "Age"; }
+      .records-table td:nth-of-type(3)::before { content: "Gender"; }
+      .records-table td:nth-of-type(4)::before { content: "Disease"; }
+      .records-table td:nth-of-type(5)::before { content: "Contact"; }
+      .records-table td:nth-of-type(6)::before { content: "Visit Date"; }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Patient Records</h2>
+  <table class="records-table">
+    <thead>
+      <tr>
+        <th>Patient Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Disease</th>
+        <th>Contact</th>
+        <th>Visit Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rahul Sharma</td>
+        <td>35</td>
+        <td>Male</td>
+        <td>Diabetes</td>
+        <td>9876543210</td>
+        <td>2025-04-10</td>
+      </tr>
+      <tr>
+        <td>Anita Desai</td>
+        <td>29</td>
+        <td>Female</td>
+        <td>Flu</td>
+        <td>9123456780</td>
+        <td>2025-04-09</td>
+      </tr>
+      <tr>
+        <td>Suresh Kumar</td>
+        <td>47</td>
+        <td>Male</td>
+        <td>Hypertension</td>
+        <td>9988776655</td>
+        <td>2025-04-08</td>
+      </tr>
+      <!-- Add more records here -->
+    </tbody>
+  </table>
+
+</body>
+</html>

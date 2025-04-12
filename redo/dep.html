@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="Icon" href="/LOGO.jpg"></link>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SWASTHYAA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SWASTHYAA - Department Management</h1>
+    </header>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search Department..." onkeyup="searchDepartments()" />
+    </div>
+
+    <table id="departmentTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Department Name</th>
+          <th onclick="sortTable(1)">Head of Department</th>
+          <th onclick="sortTable(2)">Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cardiology</td>
+          <td>Dr. Ravi Kumar</td>
+          <td>+91-9999999990</td>
+        </tr>
+        <tr>
+          <td>Neurology</td>
+          <td>Dr. Neha Sharma</td>
+          <td>+91-8888888881</td>
+        </tr>
+        <tr>
+          <td>Orthopedics</td>
+          <td>Dr. Rajesh Verma</td>
+          <td>+91-7777777772</td>
+        </tr>
+        <tr>
+          <td>Pediatrics</td>
+          <td>Dr. Sunita Das</td>
+          <td>+91-6666666663</td>
+        </tr>
+        <tr>
+          <td>Dermatology</td>
+          <td>Dr. Anita Kapoor</td>
+          <td>+91-5555555554</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

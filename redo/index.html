@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="Icon" href="/LOGO.jpg"></link>
+  <title>SWASTHYAA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Hospital Management System</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('dashboard')"><a href="/dashboard.html">Dashboard</a></button>
+    <button onclick="showSection('register-patient')"><a href="/register.html">Register Patient</a></button>
+    <button onclick="showSection('add-doctor')"><a href="/doctor.html">Add Doctor</a></button>
+    <button onclick="showSection('appointment')"><a href="/appoint.html">Book Appointment</a></button>
+    <button onclick="showSection('records')"><a href="/record.html">View Records</a></button>
+  </nav>
+  
+
+  <main>
+    <!-- Dashboard -->
+    <section id="dashboard" class="active">
+      <h2>Welcome to the Hospital Dashboard</h2>
+      <p>Use the navigation to manage patients, doctors, and appointments.</p>
+    </section>
+
+    <!-- Register Patient -->
+    <section id="register-patient">
+      <h2>Register Patient</h2>
+      <form onsubmit="registerPatient(event)">
+        <input type="text" id="p-name" placeholder="Patient Name" required>
+        <input type="number" id="p-age" placeholder="Age" required>
+        <input type="text" id="p-gender" placeholder="Gender" required>
+        <input type="text" id="p-contact" placeholder="Contact" required>
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <!-- Add Doctor -->
+    <section id="add-doctor">
+      <h2>Add Doctor</h2>
+      <form onsubmit="addDoctor(event)">
+        <input type="text" id="d-name" placeholder="Doctor Name" required>
+        <input type="text" id="d-specialty" placeholder="Specialization" required>
+        <input type="text" id="d-contact" placeholder="Contact" required>
+        <button type="submit">Add Doctor</button>
+      </form>
+    </section>
+
+    <!-- Appointment -->
+    <section id="appointment">
+      <h2>Book Appointment</h2>
+      <form onsubmit="bookAppointment(event)">
+        <input type="text" id="a-patient" placeholder="Patient Name" required>
+        <input type="text" id="a-doctor" placeholder="Doctor Name" required>
+        <input type="date" id="a-date" required>
+        <button type="submit">Book</button>
+      </form>
+    </section>
+
+    <!-- View Records -->
+    <section id="records">
+      <h2>Records</h2>
+      <button onclick="showPatients()">Show Patients</button>
+      <button onclick="showDoctors()">Show Doctors</button>
+      <button onclick="showAppointments()">Show Appointments</button>
+
+      <div id="records-display"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

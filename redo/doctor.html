@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="Icon" href="/LOGO.jpg"></link>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SWASTHYAA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #eef2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #2a4d69;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #2a9d8f;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #21867a;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Add New Doctor</h2>
+    <form action="doctors.html" method="POST">
+      <div class="form-group">
+        <label for="doctorName">Full Name</label>
+        <input type="text" id="doctorName" name="doctorName" required />
+      </div>
+
+      <div class="form-group">
+        <label for="specialization">Specialization</label>
+        <input type="text" id="specialization" name="specialization" required />
+      </div>
+
+      <div class="form-group">
+        <label for="qualification">Qualification</label>
+        <input type="text" id="qualification" name="qualification" required />
+      </div>
+
+      <div class="form-group">
+        <label for="experience">Experience (in years)</label>
+        <input type="number" id="experience" name="experience" min="0" required />
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="timing">Available Timing</label>
+        <input type="text" id="timing" name="timing" placeholder="e.g. 10am - 2pm" required />
+      </div>
+
+      <button type="submit">Add Doctor</button>
+    </form>
+  </div>
+</body>
+</html>

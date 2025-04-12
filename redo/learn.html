@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="Icon" href="/LOGO.jpg"></link>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWASTHYAA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section {
+      background-color: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .extra-info {
+      display: none;
+      margin-top: 10px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Learn More About Our SWASTHYAA</h1>
+  </header>
+
+  <div class="content">
+    <div class="section">
+      <h2>What is a SWASTHYAA?</h2>
+      <p>It is an integrated system that helps manage all aspects of hospital operations including medical, administrative, financial, and legal issues.</p>
+    </div>
+
+    <div class="section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Patient Registration</li>
+        <li>Appointment Scheduling</li>
+        <li>Doctor Management</li>
+        <li>Billing and Invoicing</li>
+        <li>Medical Records</li>
+      </ul>
+      <button onclick="toggleInfo()">Show More</button>
+      <div class="extra-info" id="moreInfo">
+        <p>Our system also supports pharmacy management, staff coordination, inventory tracking, and comprehensive reports to improve decision making.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo() {
+      const info = document.getElementById("moreInfo");
+      info.style.display = info.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>

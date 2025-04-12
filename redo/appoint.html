@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="Icon" href="/LOGO.jpg"></link>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SWASTHYAA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f2f6fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .appointment-container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .appointment-container h2 {
+      text-align: center;
+      color: #2a4d69;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #2a9d8f;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #21867a;
+    }
+  </style>
+</head>
+<body>
+  <div class="appointment-container">
+    <h2>Book Appointment</h2>
+    <form action="appointments.html" method="POST">
+      <div class="form-group">
+        <label for="patientName">Patient Name</label>
+        <input type="text" id="patientName" name="patientName" required />
+      </div>
+
+      <div class="form-group">
+        <label for="doctor">Select Doctor</label>
+        <select id="doctor" name="doctor" required>
+          <option value="">-- Choose Doctor --</option>
+          <option value="Dr. John Smith">Dr. John Smith (Cardiologist)</option>
+          <option value="Dr. Sarah Lee">Dr. Sarah Lee (Dermatologist)</option>
+          <option value="Dr. A. Kumar">Dr. A. Kumar (Physician)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Appointment Date</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+
+      <div class="form-group">
+        <label for="time">Appointment Time</label>
+        <input type="time" id="time" name="time" required />
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason for Visit</label>
+        <textarea id="reason" name="reason" rows="3" placeholder="Describe the issue..." required></textarea>
+      </div>
+
+      <button type="submit">Book Appointment</button>
+    </form>
+  </div>
+</body>
+</html>

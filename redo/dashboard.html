@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="Icon" href="/LOGO.jpg"></link>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SWASTHYAA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: #f1f5f9;
+    }
+
+    .dashboard-container {
+      display: flex;
+      width: 100%;
+    }
+
+    .sidebar {
+      width: 240px;
+      background-color: #2a4d69;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      display: block;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #1f3a53;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      padding: 30px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #2a4d69;
+    }
+
+    .card p {
+      font-size: 24px;
+      font-weight: bold;
+      color: #264653;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>SWASTHYAA Dashboard</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Patients</a></li>
+          <li><a href="#">Doctors</a></li>
+          <li><a href="#">Appointments</a></li>
+          <li><a href="#">Billing</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h1>Welcome, Admin</h1>
+      </header>
+
+      <section class="cards">
+        <div class="card">
+          <h3>Total Patients</h3>
+          <p>124</p>
+        </div>
+        <div class="card">
+          <h3>Total Doctors</h3>
+          <p>37</p>
+        </div>
+        <div class="card">
+          <h3>Appointments Today</h3>
+          <p>29</p>
+        </div>
+        <div class="card">
+          <h3>Revenue</h3>
+          <p>₹14,560</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
